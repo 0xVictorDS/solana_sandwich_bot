@@ -1,23 +1,43 @@
-# Sandooo
+# Sandwich Bot
 
-A sandwich bot
+## Overview
+The Sandwich Bot is a decentralized trading bot built on the Solana blockchain using Rust smart contracts. It is designed to automate trading strategies by executing sandwich attacks, allowing users to capitalize on price movements in the decentralized finance (DeFi) ecosystem.
 
-Medium articles WIP:
-https://medium.com/@solidquant
+## Features
+- **Automated Trading**: Executes buy and sell orders based on predefined strategies.
+- **Real-time Monitoring**: Tracks market conditions and adjusts strategies dynamically.
+- **Secure Transactions**: Utilizes Solana’s high-speed and low-cost transaction capabilities.
+- **User-friendly Interface**: Simple command-line interface for easy interaction.
 
-Roadmap + expected release dates:
-1. Opportunity detection (~1/28)
-[100 Hours of Building a Sandwich Bot](https://medium.com/@solidquant/100-hours-of-building-a-sandwich-bot-a89235281da3)
-2. Execution (~2/4)
-[Let's See If our Sandwich Bot Really Works](https://medium.com/@solidquant/lets-see-if-our-sandwich-bot-really-works-9546c49059bd)
-3. Update #1: Stablecoin sandwich (~2/18)
-4. Update #2: Multiple sandwich bundling (~2/18)
-[Adding Stablecoin Sandwiches and Group Bundling to improve our sandwich bot](https://medium.com/@solidquant/adding-stablecoin-sandwiches-and-group-bundling-to-improve-our-sandwich-bot-2037cf741f77)
-5. Update #3: V3 implementation (~2/25)
+## Prerequisites
+Before you begin, ensure you have the following installed:
+- [Rust](https://www.rust-lang.org/tools/install)
+- [Solana CLI](https://docs.solana.com/cli/install-solana-cli-tools)
 
-☕ Follow me on Twitter:
-https://twitter.com/solidquant
+## Installation
 
-⚡️ Come join our Discord community to take this journey together:
+1. **Clone the Repository**  
+git clone https://github.com/0xVictorDS/solana_sandwich_bot.git  
+cd solana_sandwich_bot
+2. **Build the Project**  
+cargo build-bpf
+3. **Deploy the Smart Contract**
+## Configuration
+Edit the configuration file `config.toml` to set your trading parameters:
+The bot will begin monitoring transactions and executing trades based on your configuration.
 
-[👨‍👩‍👦‍👦 Join the Solid Quant Discord Server!](https://discord.com/invite/e6KpjTQP98)
+## How It Works
+The Sandwich Bot listens for pending transactions in the Solana mempool and executes its own transactions to "sandwich" target trades. This involves placing a buy order before a large transaction and a sell order immediately after, profiting from the price impact caused by the target transaction.
+
+## Security Considerations
+- Ensure that you do not expose your private keys.
+- Regularly update your bot to incorporate security patches and improvements.
+
+## Contributing
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+For any inquiries or support, please reach out to victorking90111@gmail.com.
